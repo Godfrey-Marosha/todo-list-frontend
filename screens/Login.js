@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+import { Formik } from 'formik';
 
 import {
   StyledContainer,
@@ -18,6 +19,15 @@ const Login = () => {
                 <PageLogo resizeMode="cover" source={require('./../assets/img/ariscu-img1.png')} />
                 <PageTitle>Ariscu Africa</PageTitle>
                 <SubTitle>Login</SubTitle>
+
+                <Formik
+                initialValues={{ email: '', password: '' }}
+                onSubmit={(values) => {
+                    console.log(values);
+                }}
+            >
+            </Formik>
+
             </InnerContainer>
         </StyledContainer>
     );
