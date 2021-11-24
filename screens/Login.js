@@ -1,5 +1,5 @@
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-
 
 import {
   StyledContainer,
@@ -10,7 +10,8 @@ import {
 
 const Login = () => {
     return (
-        <StyledContainer>
+        <StyledContainer>        
+            <StatusBar style="dark" />
             <InnerContainer>
                 <PageLogo resizeMode="cover" source={require('./../assets/img/ariscu-img1.png')} />
                 <PageTitle>Ariscu Africa</PageTitle>
