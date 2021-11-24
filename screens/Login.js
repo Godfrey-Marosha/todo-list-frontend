@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { Formik } from 'formik';
 import { View, ActivityIndicator } from 'react-native';
+import { Octicons } from '@expo/vector-icons';
 
 import {
   StyledContainer,
@@ -14,8 +15,14 @@ import {
   StyledTextInput,
   StyledInputLabel,
   LeftIcon,
-  RightIcon
+  RightIcon,
+  Colors,
 } from './../components/styles';
+
+import { Icon } from 'native-base';
+
+// Application colours to use by name
+const { darkLight, brand, primary } = Colors;
 
 const Login = () => {
     return (
@@ -27,27 +34,40 @@ const Login = () => {
                 <SubTitle>Login</SubTitle>
 
                 <Formik
-                initialValues={{ email: '', password: '' }}
-                onSubmit={(values) => {
-                    console.log(values);
-                }}
-            >
-                {({ handleChange, handleBlur, handleSubmit, values }) => 
-                <StyledFormArea> </StyledFormArea>}
+                    initialValues={{ email: '', password: '' }}
+                    onSubmit={(values) => {
+                        console.log(values);
+                    }}
+                >
+                    {({ handleChange, handleBlur, handleSubmit, values }) => 
+                    <StyledFormArea> 
+                        <MyTextInput
+                            label="Email Address"
+                            placeholder="godfreym@gmail.com"
+                            placeholderTextColor={darkLight}
+                            onChangeText={handleChange('email')}
+                            onBlur={handleBlur('email')}
+                            value={values.email}
+                            keyboardType="email-address"
+                            icon="mail"
+                        />
+                    </StyledFormArea>}
 
-            </Formik>
+                </Formik>
 
             </InnerContainer>
         </StyledContainer>
     );
 };
-
 const MyTextInput = ({ label, icon, ...props }) => {
-    return(
-        <View> 
-        
-        </View>
-    )
-}
+    return(<View> 
+        <LeftIcon>
+            <Octicons name={icon} size={30} color={brand} />
+        </LeftIcon>
+
+        <StyledInputLabel>{label}</StyledInputLabel>
+        <StyledTextInput {...props} />
+    </View>);
+};
 
 export default Login;
