@@ -30,22 +30,11 @@ export const Colors = {
     align-items: center;
   `;
   
-  // export const WelcomeContainer = styled(InnerContainer)`
-  //   padding: 25px;
-  //   padding-top: 10px;
-  //   justify-content: center;
-  // `;
-  
   export const PageLogo = styled.Image`
     width: 250px;
     height: 200px;
   `;
-  
-  // export const WelcomeImage = styled.Image`
-  //   height: 50%;
-  //   min-width: 100%;
-  // `;
-  
+
   export const PageTitle = styled.Text`
     font-size: 30px;
     text-align: center;
@@ -53,3 +42,22 @@ export const Colors = {
     color: ${brand};
     padding: 10px;
   `;
+
+  export const SubTitle = styled.Text`
+  font-size: 18px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: ${tertiary};
+  `;
+
+  export const StyledFormArea = styled.View`
+    width = 90%;
+  `;
+  
+  // export const WelcomeImage = styled.Image`
+  //   height: 50%;
+  //   min-width: 100%;
+  // `;
+  
+  
