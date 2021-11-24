@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { Formik } from 'formik';
+import { View, ActivityIndicator } from 'react-native';
 
 import {
   StyledContainer,
@@ -26,11 +27,22 @@ const Login = () => {
                     console.log(values);
                 }}
             >
+                {({ handleChange, handleBlur, handleSubmit, values }) => 
+                <StyledFormArea> </StyledFormArea>}
+
             </Formik>
 
             </InnerContainer>
         </StyledContainer>
     );
 };
+
+const MyTextInput = ({ label, icon, ...props }) => {
+    return(
+        <View> 
+        
+        </View>
+    )
+}
 
 export default Login;
