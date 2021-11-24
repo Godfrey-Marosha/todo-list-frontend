@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { View, Text, TouchableOpacity, TextInput, Image } from 'react-native';
+import styled from 'styled-components/native';
+import { View, Text, Image } from 'react-native';
 import Constants from 'expo-constants';
 
 const StatusBarHeight = Constants.statusBarHeight;
@@ -20,8 +20,8 @@ export const Colors = {
   export const StyledContainer = styled.View`
     flex: 1;
     padding: 25px;
-    padding-top: ${StatusBarHeight + 30}px;
-    background-color: ${Colors.primary};
+    padding-top: ${StatusBarHeight + 10}px;
+    background-color: ${primary};
   `;
   
   export const InnerContainer = styled.View`
@@ -30,43 +30,26 @@ export const Colors = {
     align-items: center;
   `;
   
-  export const WelcomeContainer = styled(InnerContainer)`
-    padding: 25px;
-    padding-top: 10px;
-    justify-content: center;
-  `;
+  // export const WelcomeContainer = styled(InnerContainer)`
+  //   padding: 25px;
+  //   padding-top: 10px;
+  //   justify-content: center;
+  // `;
   
   export const PageLogo = styled.Image`
     width: 250px;
     height: 200px;
   `;
   
-  export const Avatar = styled.Image`
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    border-radius: 50px;
-    border-width: 2px;
-    border-color: ${secondary};
-    margin-bottom: 10px;
-    margin-top: 10px;
-  `;
-  
-  export const WelcomeImage = styled.Image`
-    height: 50%;
-    min-width: 100%;
-  `;
+  // export const WelcomeImage = styled.Image`
+  //   height: 50%;
+  //   min-width: 100%;
+  // `;
   
   export const PageTitle = styled.Text`
     font-size: 30px;
     text-align: center;
     font-weight: bold;
-    color: ${Colors.brand};
+    color: ${brand};
     padding: 10px;
-  
-    ${(props) =>
-      props.welcome &&
-      `
-      font-size: 35px;
-    `}
   `;
