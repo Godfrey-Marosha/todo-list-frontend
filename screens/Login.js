@@ -9,7 +9,12 @@ import {
   PageTitle,
   InnerContainer,
   SubTitle,
-  StyledFormArea
+  StyledFormArea,
+  StyledButton,
+  StyledTextInput,
+  StyledInputLabel,
+  LeftIcon,
+  RightIcon
 } from './../components/styles';
 
 const Login = () => {
