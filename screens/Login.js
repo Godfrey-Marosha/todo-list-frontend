@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { Formik } from 'formik';
-import { View, ActivityIndicator } from 'react-native';
+import { View } from 'react-native';
 import { Octicons } from '@expo/vector-icons';
 
 import {
@@ -11,15 +11,12 @@ import {
   InnerContainer,
   SubTitle,
   StyledFormArea,
-  StyledButton,
   StyledTextInput,
   StyledInputLabel,
   LeftIcon,
-  RightIcon,
   Colors,
 } from './../components/styles';
 
-import { Icon } from 'native-base';
 
 // Application colours to use by name
 const { darkLight, brand, primary } = Colors;
