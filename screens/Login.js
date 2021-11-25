@@ -13,6 +13,8 @@ import {
   StyledFormArea,
   StyledTextInput,
   StyledInputLabel,
+  StyledButton,
+  ButtonText,
   LeftIcon,
   RightIcon,
   Colors,
@@ -63,10 +65,12 @@ const Login = () => {
                             hidePassword={hidePassword}
                             setHidePassword={setHidePassword}
                         />
-                    </StyledFormArea>}
-
+                        <StyledButton onPress={handleSubmit}>
+                            <ButtonText>Login</ButtonText>
+                        </StyledButton>
+                    </StyledFormArea>
+                    }
                 </Formik>
-
             </InnerContainer>
         </StyledContainer>
     );
