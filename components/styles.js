@@ -105,6 +105,36 @@ export const ButtonText = styled.Text`
   font-size: 16px;
 `;
 
+export const MsgBox = styled.Text`
+  text-align: center;
+  font-size: 13px;
+  color: ${props => props.type == "SUCCESS" ? green : red};
+`;
+
+export const Line = styled.View`
+  height: 1px;
+  width: 100%;
+  background-color: ${darkLight};
+  margin-vertical: 10px;
+`;
+
+export const ExtraText = styled.Text`
+  justify-content: center;
+  align-content: center;
+  color: ${tertiary};
+  font-size: 15px;
+`;
+
+export const TextLink = styled.TouchableOpacity`
+  justify-content: center;
+  align-items: center;
+`;
+
+export const TextLinkContent = styled.Text`
+  color: ${brand};
+  font-size: 15px;
+`;
+
   // export const WelcomeImage = styled.Image`
   //   height: 50%;
   //   min-width: 100%;

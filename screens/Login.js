@@ -15,6 +15,7 @@ import {
   StyledInputLabel,
   StyledButton,
   ButtonText,
+  MsgBox,
   LeftIcon,
   RightIcon,
   Colors,
@@ -65,6 +66,7 @@ const Login = () => {
                             hidePassword={hidePassword}
                             setHidePassword={setHidePassword}
                         />
+                        <MsgBox>...</MsgBox>
                         <StyledButton onPress={handleSubmit}>
                             <ButtonText>Login</ButtonText>
                         </StyledButton>
