@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { Formik } from 'formik';
 import { View } from 'react-native';
-import { Octicons } from '@expo/vector-icons';
+import { Octicons, Ionicons } from '@expo/vector-icons';
 
 import {
   StyledContainer,
@@ -40,13 +40,24 @@ const Login = () => {
                     <StyledFormArea> 
                         <MyTextInput
                             label="Email Address"
+                            icon="mail"
                             placeholder="godfreym@gmail.com"
                             placeholderTextColor={darkLight}
                             onChangeText={handleChange('email')}
                             onBlur={handleBlur('email')}
                             value={values.email}
                             keyboardType="email-address"
-                            icon="mail"
+                        />
+                        <MyTextInput
+                            label="Password"
+                            icon="lock"
+                            placeholder="* * * * * * * *"
+                            placeholderTextColor={darkLight}
+                            onChangeText={handleChange('password')}
+                            onBlur={handleBlur('password')}
+                            value={values.password}
+                            secureTextEntry={true}
+                            isPassword={true}
                         />
                     </StyledFormArea>}
 
@@ -56,14 +67,22 @@ const Login = () => {
         </StyledContainer>
     );
 };
-const MyTextInput = ({ label, icon, ...props }) => {
+const MyTextInput = ({ label, icon, isPassword, ...props }) => {
     return(<View> 
         <LeftIcon>
             <Octicons name={icon} size={30} color={brand} />
         </LeftIcon>
-
         <StyledInputLabel>{label}</StyledInputLabel>
         <StyledTextInput {...props} />
+        {isPassword && (
+        <RightIcon
+          onPress={() => {
+            setHidePassword(!hidePassword);
+          }}
+        >
+          <Ionicons size={30} color={darkLight} />
+        </RightIcon>
+        )}
     </View>);
 };
 
