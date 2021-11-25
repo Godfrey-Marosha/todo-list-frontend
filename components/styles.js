@@ -6,16 +6,18 @@ const StatusBarHeight = Constants.statusBarHeight;
 
 // Application colours to use by name
 export const Colors = {
-    primary: '#ffffff',
+    primary: '#EFEFE8FF',
     secondary: '#E5E7EB',
-    tertiary: '#1F2937',
+    tertiary: '#94939bff',
     darkLight: '#9CA3AF',
-    brand: '#6D28D9',
+    brand: '#011B10',
     green: '#10B981',
     red: '#EF4444',
+    heading: '#D1ACA5',
+    top: '#EF4444',
   };
   
-  const { primary, secondary, tertiary, darkLight, brand, green, red } = Colors;
+  const { primary, secondary, tertiary, darkLight, brand, green, red, heading, top } = Colors;
   
   export const StyledContainer = styled.View`
     flex: 1;
@@ -31,7 +33,7 @@ export const Colors = {
   `;
   
   export const PageLogo = styled.Image`
-    width: 250px;
+    width: 350px;
     height: 200px;
   `;
 
@@ -39,7 +41,7 @@ export const Colors = {
     font-size: 30px;
     text-align: center;
     font-weight: bold;
-    color: ${brand};
+    color: ${heading};
     padding: 10px;
   `;
 

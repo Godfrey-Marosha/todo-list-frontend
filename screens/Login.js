@@ -28,7 +28,7 @@ const Login = () => {
             <InnerContainer>
                 <PageLogo resizeMode="cover" source={require('./../assets/img/ariscu-img1.png')} />
                 <PageTitle>Ariscu Africa</PageTitle>
-                <SubTitle>Login</SubTitle>
+                <SubTitle>Account Login</SubTitle>
 
                 <Formik
                     initialValues={{ email: '', password: '' }}
