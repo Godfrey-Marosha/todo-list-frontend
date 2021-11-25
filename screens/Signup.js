@@ -35,7 +35,6 @@ const Signup = () => {
         <StyledContainer>        
             <StatusBar style="dark" />
             <InnerContainer>
-                <PageLogo resizeMode="cover" source={require('./../assets/img/ariscu-img1.png')} />
                 <PageTitle>Ariscu Africa</PageTitle>
                 <SubTitle>Account Signup</SubTitle>
 
@@ -59,7 +58,7 @@ const Signup = () => {
                         <MyTextInput
                             label="Email Address"
                             icon="mail"
-                            placeholder="godfreym@gmail.com"
+                            placeholder="johnwick@gmail.com"
                             placeholderTextColor={darkLight}
                             onChangeText={handleChange('email')}
                             onBlur={handleBlur('email')}
