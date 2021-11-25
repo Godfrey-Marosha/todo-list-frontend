@@ -16,6 +16,10 @@ import {
   StyledButton,
   ButtonText,
   MsgBox,
+  ExtraView,
+  ExtraText,
+  TextLink,
+  TextLinkContent,
   LeftIcon,
   RightIcon,
   Colors,
@@ -70,6 +74,14 @@ const Login = () => {
                         <StyledButton onPress={handleSubmit}>
                             <ButtonText>Login</ButtonText>
                         </StyledButton>
+
+                        <ExtraView>
+                            <ExtraText>Don't have an account already? </ExtraText>
+                            <TextLink onPress={() => navigation.navigate('Signup')}>
+                                <TextLinkContent>Signup</TextLinkContent>
+                            </TextLink>
+                        </ExtraView>
+
                     </StyledFormArea>
                     }
                 </Formik>
